@@ -6,4 +6,9 @@ let inventory = [
     {"name": "mocha", "price": 5, "quantity": 15},
     {"name": "espresso", "price": 3, "quantity": 30},
     {"name": "frappuccino", "price": 7, "quantity": 20}
-]
+];
+
+// Task 2: Create an orders array of order objects
+let orders = [
+    {"customerName": "", "items": "", "status": ""}
+];
