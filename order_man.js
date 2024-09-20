@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 
+=======
+// Coding Challenge 5: Customer Order Management System
+
+// Task 1: Create an inventory array of product objects
+let inventory = [
+    {name: "latte", price: 4, quantity: 25},
+    {name: "mocha", price: 5, quantity: 15},
+    {name: "espresso", price: 3, quantity: 30},
+    {name: "frappuccino", price: 7, quantity: 20}
+];
+
+// Task 2: Create an orders array of order objects
+let orders = [];
+>>>>>>> 7a1a8deeffcb72c2a0920a200f680d0134db02ae
 
 // Task 3: Create a function to place an order
 function placeOrder (cName, iOrdered) {
@@ -20,6 +35,7 @@ function placeOrder (cName, iOrdered) {
     return `Item not found.`;
 };    
 // call placeOrder function
+<<<<<<< HEAD
 console.log(placeOrder("Sandy", {name: "latte", quantity: 4}));
 // Task 4: Create a function to calculate total 
 function calculateOrderTotal(order) {
@@ -53,3 +69,6 @@ function checkPendingOrders () {
 };
 
 let runCheck = checkPendingOrders
+=======
+console.log(placeOrder("Sandy", {name: "latte", quantity: 4}));
+>>>>>>> 7a1a8deeffcb72c2a0920a200f680d0134db02ae
