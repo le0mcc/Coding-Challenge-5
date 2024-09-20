@@ -1,6 +1,4 @@
 
-// Task 2: Create an orders array of order objects
-let orders = [];
 
 // Task 3: Create a function to place an order
 function placeOrder (cName, iOrdered) {
