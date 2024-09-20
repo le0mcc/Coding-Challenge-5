@@ -47,3 +47,13 @@ function calculateOrderTotal(order) {
 };
 // call function for latest order
 console.log(calculateOrderTotal(orders[orders.length-1]));
+
+// Task 5: Create a function to mark an order as completed
+function completeOrder (custName) {
+    let findCustomer = orders.find(customer => customer.customerName === custName);
+    if (findCustomer) {
+        findCustomer.status = "Completed";
+        return `Order for ${custName}: completed`
+    };
+};
+console.log(completeOrder("Sandy"));
