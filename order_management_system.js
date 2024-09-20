@@ -33,3 +33,17 @@ function placeOrder (cName, iOrdered) {
 // call placeOrder function
 console.log(placeOrder("Sandy", {name: "latte", quantity: 4}));
 
+// Task 4: Create a function to calculate total 
+function calculateOrderTotal(order) {
+    // find item in inventory to get price and calculate total
+    let findItem = inventory.find(item => item.name === order.itemsOrdered.name);
+    if (findItem) {
+        let total = findItem.price * order.itemsOrdered.quantity;
+        return `Total bill for ${order.customerName}: $${total}`;
+    }
+    else {
+        return `Item not found.`
+    };
+};
+// call function for latest order
+console.log(calculateOrderTotal(orders[orders.length-1]));
