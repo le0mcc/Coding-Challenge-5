@@ -21,7 +21,7 @@ function placeOrder (cName, iOrdered) {
                 item.quantity -= iOrdered.quantity;
                 // add a new order to the order status set to pending
                 orders.push({customerName: cName, itemsOrdered: iOrdered, status: "Pending"});
-                return `Thank you, ${cName}. Order received.`
+                return `Thank you, ${cName}. Order received.`;
             }
             else {
                 return `Not enough items in stock.`;
@@ -42,7 +42,7 @@ function calculateOrderTotal(order) {
         return `Total bill for ${order.customerName}: $${total}`;
     }
     else {
-        return `Item not found.`
+        return `Item not found.`;
     };
 };
 // call function for latest order
@@ -53,7 +53,25 @@ function completeOrder (custName) {
     let findCustomer = orders.find(customer => customer.customerName === custName);
     if (findCustomer) {
         findCustomer.status = "Completed";
-        return `Order for ${custName}: completed`
+        return `Order for ${custName}: completed`;
     };
 };
 console.log(completeOrder("Sandy"));
+
+// create an uncompleted order to be in pending
+console.log(placeOrder("Bert", {name: "mocha", quantity: 3}));
+
+// Task 6: Create a function to check pending orders
+function checkPendingOrders (orders) {
+    let pendingOrders = orders.filter(order => order.status === "Pending");
+    if (pendingOrders.length > 0) {
+        pendingOrders.forEach(order => {
+            console.log(`Pending order for ${order.customerName}: ${order.itemsOrdered.name}: ${order.itemsOrdered.quantity}`);
+        });
+        return "Orders still pending.";
+    }
+    else {
+        return "No pending orders.";
+    };
+};
+console.log(checkPendingOrders(orders));
